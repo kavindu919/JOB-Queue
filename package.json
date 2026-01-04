@@ -1,0 +1,14 @@
+{
+  "name": "job_queue",
+  "version": "1.0.0",
+  "description": "Mini distributed job queue",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "node src/index.js",
+    "ping": "node src/index.js ping"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs"
+}
