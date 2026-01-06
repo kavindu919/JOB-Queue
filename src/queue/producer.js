@@ -7,10 +7,10 @@ async function addJob(queueName,payload) {
         id:jobId,
         queue:queueName,
         payload:JSON.stringify(payload),
-        status:"wating",
+        status:"waiting",
         createdAt: Date.now()
     })
-    await redis.lpush('queue:wating',jobId)
+    await redis.lpush("queue:waiting", jobId);
     return jobId
 }
 
