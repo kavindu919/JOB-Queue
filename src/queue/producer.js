@@ -8,6 +8,8 @@ async function addJob(queueName,payload) {
         queue:queueName,
         payload:JSON.stringify(payload),
         status:"waiting",
+        attempts:0,
+        maxAttempts:3,
         createdAt: Date.now()
     })
     await redis.lpush("queue:waiting", jobId);
